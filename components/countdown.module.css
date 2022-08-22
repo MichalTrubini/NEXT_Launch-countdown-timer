@@ -1,0 +1,50 @@
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    max-width: 68.8rem;
+    margin: auto;
+  }
+  
+  .count_item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .count_name {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8385A9;
+    margin-top: 0.9rem;
+  }
+  
+  .count_rectangle {
+    padding: 1.1rem 0;
+    border-radius: 4px;
+    background-color: rgb(52,54,80);
+  }
+  
+  .count_number {
+    color: #FB5E84;
+    font-size: 9.6vw;
+    letter-spacing: -1px;
+  }
+
+  @media only screen and (min-width:768px) {
+    .count_number {
+        font-size: 8rem;
+      }
+
+    .count_name {
+        font-size: 1.4rem;
+        letter-spacing: 5.92px;
+        margin-top: 1.6rem;
+    }
+
+    .countdown {
+        gap: 3.2rem;
+    }
+  }
