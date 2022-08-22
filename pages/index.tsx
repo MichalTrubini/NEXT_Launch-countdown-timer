@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <div className={styles.container}>
         <div className={styles.image}>
-          <Image src={hillsImage} />
+          <Image src={hillsImage} alt="hills"/>
         </div>
         <main className={styles.main}>
           <h1 className={styles.header}>We’re launching soon</h1>
