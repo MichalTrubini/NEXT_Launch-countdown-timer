@@ -1,50 +1,121 @@
 .countdown {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.6rem;
-    max-width: 68.8rem;
-    margin: auto;
-  }
-  
-  .count_item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .count_name {
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #8385A9;
-    margin-top: 0.9rem;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  max-width: 68.8rem;
+  margin: auto;
+}
+
+.count_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.count_name {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8385a9;
+  margin-top: 0.9rem;
+}
+
+.count_rectangle {
+  padding: 1.1rem 0;
+  border-radius: 4px;
+  background-color: rgb(52, 54, 80);
+  position: relative;
+}
+
+.count_rectangle::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.count_rectangle::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 0 0 8px 8px;
+}
+
+.count_circle {
+  width: 4px;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  top: 46%;
+}
+
+.count_circle_left {
+  left: 0;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.count_circle_right {
+  right: 0;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.count_number {
+  color: #fb5e84;
+  font-size: 9.6vw;
+  letter-spacing: -1px;
+}
+
+@media only screen and (min-width: 768px) {
   .count_rectangle {
-    padding: 1.1rem 0;
-    border-radius: 4px;
-    background-color: rgb(52,54,80);
+    border-radius: 8px;
   }
-  
+
   .count_number {
-    color: #FB5E84;
-    font-size: 9.6vw;
-    letter-spacing: -1px;
+    font-size: 8rem;
   }
 
-  @media only screen and (min-width:768px) {
-    .count_number {
-        font-size: 8rem;
-      }
-
-    .count_name {
-        font-size: 1.4rem;
-        letter-spacing: 5.92px;
-        margin-top: 1.6rem;
-    }
-
-    .countdown {
-        gap: 3.2rem;
-    }
+  .count_name {
+    font-size: 1.4rem;
+    letter-spacing: 5.92px;
+    margin-top: 1.6rem;
   }
+
+  .countdown {
+    gap: 3.2rem;
+  }
+
+  .count_circle {
+    width: 8px;
+    height: 12px;
+    top: 44%;
+  }
+
+  .count_circle_left {
+    left: -1px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .count_circle_right {
+    right: -1px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .count_rectangle::after {
+    height: 10px;
+  }
+}
